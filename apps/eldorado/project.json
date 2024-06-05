@@ -1,28 +1,28 @@
 {
-  "name": "nx-demo",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "name": "eldorado",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "./src",
+  "sourceRoot": "apps/eldorado/src",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/nx-demo",
-        "index": "./src/index.html",
-        "browser": "./src/main.ts",
+        "outputPath": "dist/apps/eldorado",
+        "index": "apps/eldorado/src/index.html",
+        "main": "apps/eldorado/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "tsconfig.app.json",
+        "tsConfig": "apps/eldorado/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "public"
+            "input": "apps/eldorado/public"
           }
         ],
-        "styles": ["./src/styles.scss"],
+        "styles": ["apps/eldorado/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -42,9 +42,12 @@
           "outputHashing": "all"
         },
         "development": {
+          "buildOptimizer": false,
           "optimization": false,
+          "vendorChunk": true,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "namedChunks": true
         }
       },
       "defaultConfiguration": "production"
@@ -53,10 +56,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "nx-demo:build:production"
+          "buildTarget": "eldorado:build:production"
         },
         "development": {
-          "buildTarget": "nx-demo:build:development"
+          "buildTarget": "eldorado:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,20 +67,17 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "nx-demo:build"
+        "buildTarget": "eldorado:build"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": ["./src"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectName}"],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "jest.config.ts"
+        "jestConfig": "apps/eldorado/jest.config.ts"
       }
     }
   }

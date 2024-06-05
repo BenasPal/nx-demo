@@ -1,0 +1,31 @@
+{
+  "name": "frontend-router",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/frontend-router/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "frontend-router:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "frontend-router:build:development"
+        },
+        "production": {
+          "buildTarget": "frontend-router:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/frontend-router/jest.config.ts"
+      }
+    }
+  }
+}
