@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { User } from '@nx-demo/models';
 
 @Component({
-  selector: 'lib-price-range',
+  selector: 'lib-account-price-range',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './price-range.component.html',
-  styleUrl: './price-range.component.css',
+  templateUrl: './account-price-range.component.html',
+  styleUrl: './account-price-range.component.css',
 })
-export class PriceRangeComponent {
+export class AccountPriceRangeComponent {
   user: User = {
     name: 'test',
     id: 'test',

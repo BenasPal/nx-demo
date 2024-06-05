@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PriceRangeComponent } from './price-range.component';
+import { PriceRangeComponent } from './account-price-range.component';
 
 describe('PriceRangeComponent', () => {
   let component: PriceRangeComponent;
