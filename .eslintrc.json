@@ -13,8 +13,71 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": [
+                  "type:routes",
+                  "type:api",
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "type:utils",
+                  "type:models"
+                ]
+              },
+              {
+                "sourceTag": "domain:frontend-router",
+                "onlyDependOnLibsWithTags": [
+                  "domain:frontend-router",
+                  "type:models"
+                ]
+              },
+              {
+                "sourceTag": "domain:accounts",
+                "onlyDependOnLibsWithTags": [
+                  "domain:accounts",
+                  "domain:shared"
+                ]
+              },
+              {
+                "sourceTag": "domain:boosting",
+                "onlyDependOnLibsWithTags": [
+                  "domain:boosting",
+                  "domain:shared"
+                ]
+              } ,
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": [
+                  "domain:shared"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:utils",
+                  "type:models"
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "type:utils",
+                  "type:api",
+                  "type:models"
+                ]
+              },  
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": [
+                  "type:data-access",
+                  "type:utils",
+                  "type:api",
+                  "type:models"
+                ]
               }
             ]
           }

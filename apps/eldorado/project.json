@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/eldorado/src",
-  "tags": [],
+  "tags": ["type:app", "domain:eldorado"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

@@ -1,0 +1,20 @@
+{
+  "name": "accounts-store-page-feature-list",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/accounts/store-page/feature-list/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["type:feature", "domain:accounts"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/accounts/store-page/feature-list/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

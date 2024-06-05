@@ -4,8 +4,8 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/admin/src",
-  "tags": [],
-  "targets": {
+  "tags": ["type:app", "domain:admin"],
+    "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],

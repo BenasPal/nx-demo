@@ -3,6 +3,7 @@
  * This is only a minimal backend to get started.
  */
 
+import { User } from '@nx-demo/models';
 import express from 'express';
 import * as path from 'path';
 
@@ -11,6 +12,10 @@ const app = express();
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('/api', (req, res) => {
+  const user: User = {
+    name: 'test',
+    id: 'test',
+  };
   res.send({ message: 'Welcome to frontend-router!' });
 });
 

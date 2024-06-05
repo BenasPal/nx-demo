@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/frontend-router/src",
   "projectType": "application",
-  "tags": [],
+  "tags": ["type:app", "domain:frontend-router"],
   "targets": {
     "serve": {
       "executor": "@nx/js:node",

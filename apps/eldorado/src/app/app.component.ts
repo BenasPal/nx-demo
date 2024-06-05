@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { ButtonComponent } from 'libs/shared/ui/src';
+import { ButtonComponent } from '@nx-demo/ui';
 
 @Component({
   standalone: true,
